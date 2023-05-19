@@ -4119,6 +4119,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.System.Cnds.Compare,
 		C3.Behaviors.Bullet.Acts.SetSpeed,
+		C3.Plugins.Sprite.Acts.SetAnimSpeed,
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Text.Acts.SetVisible,
 		C3.Plugins.Sprite.Acts.Destroy,
@@ -4130,6 +4131,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.LocalStorage.Exps.ItemValue,
 		C3.Plugins.LocalStorage.Acts.SetItem,
 		C3.Plugins.LocalStorage.Cnds.OnItemExists,
+		C3.Behaviors.Platform.Cnds.IsJumping,
+		C3.Plugins.Sprite.Acts.SetAnim,
+		C3.Behaviors.Platform.Cnds.IsOnFloor,
 		C3.Plugins.System.Cnds.OnLoadFinished,
 		C3.Plugins.System.Acts.GoToLayout
 	];
@@ -4278,19 +4282,23 @@ self.C3_ExpressionFuncs = [
 		() => 180,
 		() => 15,
 		() => 240,
+		() => 30,
 		() => 20,
 		() => 280,
+		() => 35,
 		() => 25,
 		() => 320,
 		() => 2,
+		() => 40,
 		() => 500,
-		() => 1.5,
 		() => 0,
 		() => "max_count",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
-		}
+		},
+		() => "cat_jump",
+		() => "run"
 ];
 
 

@@ -4307,7 +4307,7 @@ function or(l, r)
 
 self.C3_ExpressionFuncs = [
 		() => 1,
-		() => 720,
+		() => 915,
 		() => 660,
 		() => "",
 		p => {

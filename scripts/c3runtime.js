@@ -4148,6 +4148,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.System.Cnds.Compare,
 		C3.Behaviors.Bullet.Acts.SetSpeed,
+		C3.Behaviors.Bullet.Exps.Speed,
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.System.Exps.random,
 		C3.Plugins.Keyboard.Cnds.OnKey,
@@ -4179,9 +4180,9 @@ self.C3_JsPropNameTable = [
 	{DestroyOutsideLayout: 0},
 	{ScrollTo: 0},
 	{Platform: 0},
-	{Sprite: 0},
+	{cat: 0},
 	{Solid: 0},
-	{Sprite2: 0},
+	{platform: 0},
 	{Bullet: 0},
 	{dog1: 0},
 	{TextGameover: 0},
@@ -4194,9 +4195,9 @@ self.C3_JsPropNameTable = [
 	{TextRecord: 0},
 	{TextMaxCount: 0},
 	{LocalStorage: 0},
-	{Sprite3: 0},
+	{loading: 0},
 	{puddle: 0},
-	{Sprite4: 0},
+	{eagle: 0},
 	{HTMLElement: 0},
 	{MAX_COUNT: 0},
 	{COUNT: 0},
@@ -4316,8 +4317,12 @@ self.C3_ExpressionFuncs = [
 		() => 5,
 		() => 700,
 		() => 560,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpBehavior();
+		},
 		() => 10,
-		() => 470,
+		() => 545,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => Math.round(f0(1, 3));
@@ -4330,8 +4335,8 @@ self.C3_ExpressionFuncs = [
 			return () => (v0.GetValue() + 1);
 		},
 		() => 180,
-		() => 240,
 		() => 15,
+		() => 240,
 		() => 30,
 		() => 20,
 		() => 280,
